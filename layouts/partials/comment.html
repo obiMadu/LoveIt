@@ -62,12 +62,12 @@
         {{- if $waline.enable -}}
             <div id="waline" class="comment"></div>
             <script type="module">
-                import { init } from "{{- $waline.js | default "https://unpkg.com/@waline/client@v2/dist/waline.js" -}}";
+                import { init } from "{{ $waline.js }}";
 
                 init({
-                el: "{{- $waline.el | default "#waline" -}}",
-                serverURL: "{{- $waline.serverURL | default "https://your-domain.vercel.app" -}}",
-                lang: "{{- $waline.lang | default "en" -}}",
+                el: "{{ $waline.el }}",
+                serverURL: "{{ $waline.serverURL }}",
+                lang: "{{ $waline.lang }}",
                 });
             </script>
             <noscript>
