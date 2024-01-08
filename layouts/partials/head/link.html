@@ -1,5 +1,6 @@
 {{- $cdn := .Scratch.Get "cdn" | default dict -}}
 {{- $fingerprint := .Scratch.Get "fingerprint" -}}
+{{- $comment := .Scratch.Get "comment" | default dict -}}
 
 {{- if not .Site.Params.app.noFavicon -}}
     {{- with .Site.Params.app.svgFavicon -}}
