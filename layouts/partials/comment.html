@@ -65,9 +65,9 @@
                 import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
 
                 init({
-                el:  {{- $waline.el | default '#waline' -}},
-                serverURL:  {{- $waline.serverURL | default 'https://your-domain.vercel.app' -}},
-                lang: {{- $waline.lang | default 'en' -}},
+                el:  {{- $waline.el | default "#waline" -}},
+                serverURL:  {{- $waline.serverURL | default "https://your-domain.vercel.app" -}},
+                lang: {{- $waline.lang | default "en" -}},
                 });
             </script>
             <noscript>
