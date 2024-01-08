@@ -65,13 +65,13 @@
                 import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
 
                 init({
-                el: {{- $waline.el | default "#waline" -}},
-                serverURL: {{- $waline.serverURL | default "https://your-domain.vercel.app" -}},
-                lang: 'en',
+                el:  {{- $waline.el | default '#waline' -}},
+                serverURL:  {{- $waline.serverURL | default 'https://your-domain.vercel.app' -}},
+                lang: {{- $waline.lang | default 'en' -}},
                 });
             </script>
             <noscript>
-                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+                Please enable JavaScript to view the comments powered by <a href="https://waline.js.org/">Waline</a>.
             </noscript>
         {{- end -}}
 
