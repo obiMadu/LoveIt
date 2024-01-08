@@ -62,12 +62,14 @@
         {{- if $waline.enable -}}
             <div id="waline" class="comment"></div>
             <script type="module">
-                import { init } from "{{ string $waline.js }}";
+                import { init } from \
+                {{ string $waline.js }};
 
                 init({
                 el: "{{ $waline.el }}",
-                serverURL: "{{ string $waline.serverURL }}",
-                lang: "{{ string $waline.lang }}",
+                serverURL: \
+                {{ string $waline.serverURL }},
+                lang: "{{ $waline.lang }}",
                 });
             </script>
             <noscript>
