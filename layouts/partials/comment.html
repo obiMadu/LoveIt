@@ -62,7 +62,7 @@
         {{- if $waline.enable -}}
             <div id="waline" class="comment"></div>
             <script type="module">
-                import { init } from {{- $waline.js | default "https://unpkg.com/@waline/client/dist/waline.js" -}};
+                import { init } from {{- $waline.js | default "https://unpkg.com/@waline/client@v2/dist/waline.js" -}};
 
                 init({
                 el:  {{- $waline.el | default "#waline" -}},
