@@ -61,6 +61,15 @@
         {{- $waline := $comment.waline | default dict -}}
         {{- if $waline.enable -}}
             <div id="waline" class="comment"></div>
+            <script type="module">
+                import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+
+                init({
+                el: {{- $waline.el | default "#waline" -}},
+                serverURL: {{- $waline.serverURL | default "https://your-domain.vercel.app" -}},
+                lang: 'en',
+                });
+            </script>
             <noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
             </noscript>
