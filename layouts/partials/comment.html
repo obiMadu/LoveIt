@@ -64,11 +64,15 @@
             <script type="module">
                 import { init } from {{ string $waline.js }};
 
-                init({
+                const config = {
                 el: {{ string $waline.el }},
                 serverURL: {{ string $waline.serverURL }},
                 lang: {{ string $waline.lang }},
-                });
+                }
+
+                setTimeout(function() {
+                init(config);
+                }, 300);
             </script>
             <noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://waline.js.org/">Waline</a>.
