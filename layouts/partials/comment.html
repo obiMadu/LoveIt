@@ -67,10 +67,10 @@
                 const config = {
                 el: {{ string $waline.el }},
                 serverURL: {{ string $waline.serverURL }},
+                requiredMeta: {{ $waline.requiredMeta }},
                 lang: {{ string $waline.lang | default "en" }},
                 recaptchaV3Key: {{ string $waline.recaptchaV3Key | default "" }},
                 reaction: {{ $waline.reaction | default true }},
-                requiredMeta: {{ $waline.requiredMeta | default ["nick"] }},
                 dark: {{ $waline.dark | default false }},
                 wordLimit: {{ $waline.wordLimit | default 150 }},
                 copyright: {{ $waline.copyright | default true }},
